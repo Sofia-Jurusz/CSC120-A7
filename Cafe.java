@@ -13,12 +13,12 @@ public class Cafe extends Building implements CafeRequirements{
      * @param address Cafe's address
      * @param nFloors Number of floors in Cafe
      */
-    public Cafe(String name, String address, int nFloors) {
+    public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         super(name, address, nFloors);
-        this.nCoffeeOunces = 800;
-        this.nSugarPackets = 100;
-        this.nCreams = 100;
-        this.nCups = 100;
+        this.nCoffeeOunces = nCoffeeOunces;
+        this.nSugarPackets = nSugarPackets;
+        this.nCreams = nCreams;
+        this.nCups = nCups;
         System.out.println("You have built a cafe: ☕");
     }
 
@@ -75,7 +75,7 @@ public class Cafe extends Building implements CafeRequirements{
     //main for testing
     public static void main(String[] args) {
         System.out.println();
-        Cafe woodstar= new Cafe("Woodstar", "60 Masonic St, Northampton, MA", 1);
+        Cafe woodstar= new Cafe("Woodstar", "60 Masonic St, Northampton, MA", 1, 800, 100, 100, 100);
         System.out.println(woodstar.toString());
         woodstar.sellCoffee(800,1,0);
 

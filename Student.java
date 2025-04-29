@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 
 public class Student {
+
     // Attributes 
     private String name; 
     private String id; 
     private int classYear; 
     private ArrayList<Course> classes; 
 
+    /**
+     * Constructor for student
+     */
     public Student(String name, String id, int classYear) {
         this.name = name;
         this.id = id;
@@ -14,10 +18,18 @@ public class Student {
         this.classes = new ArrayList<>(); 
     }
 
+    /**
+     * accessor for a student's name
+     * @return student's name
+     */
     public String getName() {
         return this.name; 
     }
 
+    /**
+     * toString Method for student and their information
+     * @return stylized string of students's name, ID number, and class year
+     */
     public String toString() {
         return this.name + " ID: " + this.id + " Class Year: " + this.classYear;
     }

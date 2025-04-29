@@ -22,8 +22,7 @@ public class House extends Building implements HouseRequirements{
 
   /**
    * acessor for if this.House has a dinning room
-   * @return true if it has a dining room
-   * @return false if it does not have a dinning room
+   * @return whether or not the house has a dining room
    */
   public boolean hasDiningRoom(){
     return this.hasDiningRoom;
@@ -76,8 +75,7 @@ public class House extends Building implements HouseRequirements{
   /**
    * accessor for if a specific student lives in this house
    * @param s student in question
-   * @return true if they live in this house
-   * @return flase if they do not live in this house
+   * @return true if they live in this house, and false otherwise
    */
   public boolean isResident(Student s){
     if (this.residents.contains(s)){
